@@ -1,0 +1,82 @@
+if(point%xdim == 0 && point/xdim == 0)
+{
+    for(int i{0}; i < 2; ++i) // y
+    {
+        for(int j{0}; j < 2; ++j) // x
+        {
+            board[point + (xdim*i) + j] = board[point + (xdim*i) + j] & ~hiddenBit();
+        }//nested loop
+    }//outer for loop
+} else if(point%xdim == xdim-1 && point/xdim == 0)
+{
+    for(int i{0}; i < 2; ++i) // y
+                {
+                    for(int j{-1}; j < 1; ++j) // x
+                    {
+                        board[point + (xdim*i) + j] = board[point + (xdim*i) + j] & ~hiddenBit();
+                    }//nested loop
+                }//outer for loop
+            } else if(point%xdim == 0 && point/xdim == ydim-1)
+            {
+                for(int i{-1}; i < 1; ++i) // y
+                {
+                   for(int j{0}; j < 2; ++j) // x
+                    {
+                        board[point + (xdim*i) + j] = board[point + (xdim*i) + j] & ~hiddenBit();
+                    }//nested loop
+                }//outer for loop
+            } else if(point%xdim == xdim-1 && point/xdim == ydim-1)
+            {
+                for(int i{-1}; i < 1; ++i) // y
+                {
+                   for(int j{-1}; j < 1; ++j) // x
+                    {
+                        board[point + (xdim*i) + j] = board[point + (xdim*i) + j] & ~hiddenBit();
+                    }//nested loop
+                }//outer for loop
+            } else if(point%xdim == 0)
+            {
+                for(int i{-1}; i < 2; ++i) // y
+                {
+                    for(int j{0}; j < 2; ++j) // x
+                    {
+                        board[point + (xdim*i) + j] = board[point + (xdim*i) + j] & ~hiddenBit();
+                    }//nested loop
+                }//outer for loop
+            } else if(point%xdim == xdim-1)
+            {
+                for(int i{-1}; i < 2; ++i) // y
+                {
+                    for(int j{-1}; j < 1; ++j) // x
+                    {
+                        board[point + (xdim*i) + j] = board[point + (xdim*i) + j] & ~hiddenBit();
+                    }//nested loop
+                }//outer for loop
+            } else if(point/xdim == 0)
+            {
+                for(int i{0}; i < 2; ++i) // y
+                {
+                   for(int j{-1}; j < 2; ++j) // x
+                    {
+                        board[point + (xdim*i) + j] = board[point + (xdim*i) + j] & ~hiddenBit();
+                    }//nested loop
+                }//outer for loop
+            } else if(point/xdim == ydim-1)
+            {
+                for(int i{-1}; i < 1; ++i) // y
+                {
+                   for(int j{-1}; j < 2; ++j) // x
+                    {
+                        board[point + (xdim*i) + j] = board[point + (xdim*i) + j] & ~hiddenBit();
+                    }//nested loop
+                }//outer for loop
+            } else
+            {
+                for(int i{-1}; i < 2; ++i) // y
+                {
+                   for(int j{-1}; j < 2; ++j) // x
+                    {
+                        board[point + (xdim*i) + j] = board[point + (xdim*i) + j] & ~hiddenBit();
+                    }//nested loop
+                }//outer for loop
+            }//inner if
